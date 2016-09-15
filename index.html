@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,41 +19,45 @@
     <![endif]-->
   </head>
   <body>
-    <div>
-      <div><img src="http://placehold.it/100x100"></div>
-      <div>
-        <h1>Jane Doette</h1>
-        <h3>Front-end Ninja</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"><img class="img-responsive" src="http://placehold.it/100x100"></div>
+        <div class="col-md-6 text-right text-uppercase">
+          <h1>Jane Doette</h1>
+          <h3>Front-end Ninja</h3>
+        </div>
       </div>
-    </div>
-    <div>
-      <img src="http://placehold.it/1140x350">
-    </div>
-    <div>
-      <h2>Featured Work</h2>
-    </div>
-    <div>
-      <div>
-        <img src="http://placehold.it/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com">Link to project</a></p>
+      <div class="row">
+        <img class="img-responsive col-md-12" src="http://placehold.it/1140x350">
       </div>
-      <div>
-        <img src="http://placehold.it/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com">Link to project</a></p>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Featured Work</h2>
+        </div>
       </div>
-    </div>
-    <div>
-      <div>
-        <img src="http://placehold.it/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com">Link to project</a></p>
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-responsive" src="http://placehold.it/555x300" data-toggle="modal" data-target="#project1">
+          <h3>Appify</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-responsive" src="http://placehold.it/555x300">
+          <h3>Appify</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
       </div>
-      <div>
-        <img src="http://placehold.it/555x300">
-        <h3>Appify</h3>
-        <p><a href="http://github.com">Link to project</a></p>
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-responsive" src="http://placehold.it/555x300">
+          <h3>Appify</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-responsive" src="http://placehold.it/555x300">
+          <h3>Appify</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
       </div>
     </div>
 
@@ -60,5 +65,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Modal -->
+   <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+               </div>
+               <div class="modal-body">
+                   <img class="img-responsive" src="http://placehold.it/555x300">
+                   This was my first project in this class. I learned a lot about HTML and CSS.
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+           </div>
+       </div>
+   </div>
   </body>
 </html>
