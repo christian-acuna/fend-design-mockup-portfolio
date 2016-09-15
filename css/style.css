@@ -1,4 +1,8 @@
-img {
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.responsive-img {
   max-width: 100%;
 }
 
@@ -9,4 +13,22 @@ img {
 
 .style {
   border-top: 3px solid #7d97ad;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.name {
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.name-header {
+  text-align: right;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-size: 1.7rem;
+  text-transform: uppercase;
 }
