@@ -6,18 +6,18 @@ var plumber = require('gulp-plumber');
 var bs = require('browser-sync').create();
 
 gulp.task('scripts', function() {
-  gulp.src('js/*.js')
+  gulp.src('src/js/*.js')
       .pipe(plumber())
       .pipe(uglify())
       .pipe(rename('app.min.js'))
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('css/*.css')
+  return gulp.src('src/css/*.css')
     .pipe(plumber())
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('minCSS'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(bs.stream());
 });
 
@@ -29,8 +29,8 @@ gulp.task('serve',['minify-css'], function() {
     }
   });
 
-  gulp.watch('js/*.js', ['scripts']);
-  gulp.watch('css/*.css', ['minify-css']);
+  gulp.watch('src/js/*.js', ['scripts']);
+  gulp.watch('src/css/*.css', ['minify-css']);
   gulp.watch('./*.html').on('change', bs.reload);
 });
 
