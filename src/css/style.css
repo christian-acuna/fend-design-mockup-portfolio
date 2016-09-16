@@ -14,6 +14,15 @@ body {
   max-height: 900px;
 }*/
 
+.project-title {
+  text-align: center;
+  color: #02b3e4;
+}
+
+.title-spacing {
+  margin-top: 45px;
+}
+
 .featured-title {
   color: #7d97ad;
   font-weight: 300;
