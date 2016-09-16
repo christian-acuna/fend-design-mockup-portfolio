@@ -58,7 +58,7 @@ gulp.task('images', ['clean:images'], function() {
           extname: '.webp',
         }
       }, {
-        width: 300,
+        width: 300 * 2,
         rename: {
           suffix: '-small@2x',
           extname: '.webp',
@@ -68,22 +68,11 @@ gulp.task('images', ['clean:images'], function() {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('images', ['clean:images'], function() {
-  return gulp.src('images_src/*.{jpg,png}')
+gulp.task('images:portrait', function() {
+  return gulp.src('images_src/portrait/*.{jpg,png}')
     .pipe($.responsive({
       // Convert all images to JPEG format
       '*': [{
-        width: 1000,
-        rename: {
-          extname: '.jpg',
-        },
-      }, {
-        width: 1000 * 2,
-        rename: {
-          suffix: '@2x',
-          extname: '.jpg',
-        },
-      }, {
         width: 300,
         rename: {
           suffix: '-small',
@@ -96,35 +85,24 @@ gulp.task('images', ['clean:images'], function() {
           extname: '.jpg',
         }
       }, {
-        width: 1000,
-        rename: {
-          extname: '.webp'
-        },
-      }, {
-        width: 1000 * 2,
-        rename: {
-          suffix: '@2x',
-          extname: '.webp',
-        },
-      }, {
         width: 300,
         rename: {
           suffix: '-small',
           extname: '.webp',
         }
       }, {
-        width: 300,
+        width: 300 * 2,
         rename: {
           suffix: '-small@2x',
           extname: '.webp',
         }
       }],
     }))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/images/portrait'));
 });
 
 gulp.task('clean:images', function() {
-  return del(['dist/images/**/*']);
+  return del(['dist/images/**', '!dist/images/portrait/**']);
 });
 
 gulp.task('scripts', function() {
