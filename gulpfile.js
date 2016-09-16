@@ -29,6 +29,17 @@ gulp.task('images', ['clean:images'], function() {
           suffix: '@2x',
           extname: '.jpg',
         },
+      }, {
+        width: 1000,
+        rename: {
+          extname: '.webp'
+        },
+      }, {
+        width: 1000 * 2,
+        rename: {
+          suffix: '@2x',
+          extname: '.webp',
+        },
       }],
     }))
     .pipe(gulp.dest('dist/images'));
