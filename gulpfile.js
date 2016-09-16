@@ -23,12 +23,23 @@ gulp.task('images', ['clean:images'], function() {
           extname: '.jpg',
         },
       }, {
-        // Produce 2x images and rename them
         width: 1000 * 2,
         rename: {
           suffix: '@2x',
           extname: '.jpg',
         },
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small',
+          extname: '.jpg',
+        }
+      }, {
+        width: 300 * 2,
+        rename: {
+          suffix: '-small@2x',
+          extname: '.jpg',
+        }
       }, {
         width: 1000,
         rename: {
@@ -40,6 +51,73 @@ gulp.task('images', ['clean:images'], function() {
           suffix: '@2x',
           extname: '.webp',
         },
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small',
+          extname: '.webp',
+        }
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small@2x',
+          extname: '.webp',
+        }
+      }],
+    }))
+    .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('images', ['clean:images'], function() {
+  return gulp.src('images_src/*.{jpg,png}')
+    .pipe($.responsive({
+      // Convert all images to JPEG format
+      '*': [{
+        width: 1000,
+        rename: {
+          extname: '.jpg',
+        },
+      }, {
+        width: 1000 * 2,
+        rename: {
+          suffix: '@2x',
+          extname: '.jpg',
+        },
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small',
+          extname: '.jpg',
+        }
+      }, {
+        width: 300 * 2,
+        rename: {
+          suffix: '-small@2x',
+          extname: '.jpg',
+        }
+      }, {
+        width: 1000,
+        rename: {
+          extname: '.webp'
+        },
+      }, {
+        width: 1000 * 2,
+        rename: {
+          suffix: '@2x',
+          extname: '.webp',
+        },
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small',
+          extname: '.webp',
+        }
+      }, {
+        width: 300,
+        rename: {
+          suffix: '-small@2x',
+          extname: '.webp',
+        }
       }],
     }))
     .pipe(gulp.dest('dist/images'));
