@@ -14,6 +14,9 @@ body {
   max-height: 900px;
 }*/
 
+.header {
+  margin-top: 30px;
+}
 .project-title {
   text-align: center;
   color: #02b3e4;
@@ -57,4 +60,99 @@ body {
   margin-top: 0;
   text-transform: uppercase;
   font-size: 1.7rem;
+}
+
+@media screen and (min-width: 660px) and (max-width: 825px) {
+  .name {
+    font-size: 4rem;
+  }
+
+  .logo-image {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .featured-title {
+    font-size: 3.2rem;
+  }
+
+  .project-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 659px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .logo-image {
+    max-width: 65px;
+    max-height: 65px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .featured-title {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo-image {
+    width: 55px;
+    height: 55px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .mobile-margin {
+    margin-bottom: 20px;
+  }
+
+  .featured-title {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .featured-title {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 2.0rem;
+  }
 }
